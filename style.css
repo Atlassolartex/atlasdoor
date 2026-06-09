@@ -215,9 +215,9 @@ body {
    ============================================================ */
 .hero {
   background: var(--navy);
-  min-height: 600px;
+  min-height: 560px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 55% 45%;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -232,7 +232,7 @@ body {
 }
 
 .hero-left {
-  padding: 64px 40px 64px 60px;
+  padding: 56px 32px 56px 60px;
   position: relative;
   z-index: 2;
 }
@@ -295,30 +295,36 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 60px 40px 20px;
-  min-height: 600px;
+  padding: 0;
+  align-self: stretch;
+  overflow: hidden;
 }
 
 .hero-image-wrap {
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 560px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 /* Glow behind hero image */
 .hero-image-wrap::before {
   content: '';
   position: absolute;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(ellipse at center, rgba(245,114,10,0.30) 0%, rgba(200,60,0,0.12) 45%, transparent 72%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(245,114,10,0.28) 0%, rgba(200,60,0,0.10) 45%, transparent 70%);
   border-radius: 50%;
-  filter: blur(24px);
+  filter: blur(32px);
   animation: heroGlow 3.5s ease-in-out infinite;
   z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 @keyframes heroGlow {
   0%, 100% { opacity: 0.7; transform: scale(1); }
@@ -328,10 +334,14 @@ body {
 .hero-img {
   position: relative;
   z-index: 1;
-  max-width: 420px;
   width: 100%;
-  height: auto;
-  filter: drop-shadow(0 0 40px rgba(245,114,10,0.25));
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  /* drop-shadow works on transparent PNGs — no box, just image glow */
+  filter: drop-shadow(0 0 48px rgba(245,114,10,0.30)) drop-shadow(0 0 80px rgba(200,60,0,0.15));
 }
 
 /* ============================================================
@@ -753,8 +763,16 @@ footer {
   }
   .hero-left { padding: 48px 24px 32px; }
   .hero-headline { font-size: 52px; }
-  .hero-right { min-height: 280px; padding: 20px 24px 48px; }
-  .hero-img { max-width: 280px; }
+  .hero-right {
+    min-height: 300px;
+    padding: 0;
+  }
+  .hero-image-wrap { min-height: 300px; }
+  .hero-img {
+    object-fit: contain;
+    max-height: 300px;
+    width: auto;
+  }
 
   .trust-bar { grid-template-columns: repeat(2, 1fr); padding: 32px 24px; }
   .services-section { padding: 48px 24px; }

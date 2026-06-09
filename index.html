@@ -1,100 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atlas Door Company | Lifting The Standard</title>
-<meta name="description" content="Garage Door Installation, Repair & Maintenance">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Door Company – Lifting the Standard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="header">
-<div class="container nav">
-<img src="LOGO.png" class="logo" alt="Atlas">
-<nav>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#areas">Service Areas</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="navbar">
+  <a href="#" class="nav-logo">
+    <img src="LOGO.png" alt="Atlas Door Company" />
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#services" class="has-arrow">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#areas">Service Areas</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <a href="tel:9725550123" class="nav-phone">
+    <!-- Phone icon -->
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    972.555.0123
+  </a>
 </nav>
-<a class="phone-btn" href="tel:+19725550123">972.555.0123</a>
-</div>
-</header>
 
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
 <section class="hero">
-<img src="HERO.png" class="hero-art" alt="Atlas Hero">
-<div class="hero-gradient"></div>
-<div class="hero-glow"></div>
+  <div class="hero-overlay"></div>
 
-<div class="container hero-content">
-<div class="copy">
-<div class="eyebrow">PREMIUM GARAGE DOOR SERVICES</div>
-<h1>LIFTING<br>THE<br><span>STANDARD.</span></h1>
-<p>Expert installation, repair and maintenance for homes and businesses.</p>
-<div class="buttons">
-<a href="#" class="btn orange">GET A FREE QUOTE</a>
-<a href="#" class="btn ghost">CALL NOW</a>
-</div>
-<div class="trust-inline">LICENSED • INSURED • 5-STAR SERVICE</div>
-</div>
-</div>
+  <div class="hero-left">
+    <span class="hero-eyebrow">Premium Garage Door Services</span>
+    <h1 class="hero-headline">
+      <span>Lifting</span>
+      <span>The</span>
+      <span class="accent">Standard.</span>
+    </h1>
+    <p class="hero-sub">Expert installation, repair and maintenance for homes and businesses.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-orange">
+        Get a Free Quote
+        <!-- Arrow right -->
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+      <a href="tel:9725550123" class="btn-outline-white">
+        <!-- Phone icon -->
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        Call Now
+      </a>
+    </div>
+    <div class="hero-trust">
+      <!-- Shield check icon -->
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--orange)">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+      </svg>
+      <span>Licensed</span>
+      <span class="dot">•</span>
+      <span>Insured</span>
+      <span class="dot">•</span>
+      <span>5-Star Service</span>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-image-wrap">
+      <img src="HERO.png" alt="Atlas Door Company – Lifting the Standard" class="hero-img" />
+    </div>
+  </div>
 </section>
 
+
+<!-- ============================================================
+     TRUST BAR
+     ============================================================ -->
 <section class="trust-bar">
-<div class="trust">Licensed & Insured</div>
-<div class="trust">5-Star Service</div>
-<div class="trust">Residential Specialists</div>
-<div class="trust">Fast Response</div>
+
+  <div class="trust-item">
+    <div class="trust-icon">
+      <!-- Shield checkmark -->
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <polyline points="9 12 11 14 15 10"/>
+      </svg>
+    </div>
+    <div class="trust-title">Licensed &amp; Insured</div>
+    <div class="trust-desc">Fully licensed and insured and committed to your peace of mind.</div>
+  </div>
+
+  <div class="trust-item">
+    <div class="trust-icon">
+      <!-- Star -->
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+    </div>
+    <div class="trust-title">5-Star Service</div>
+    <div class="trust-desc">Hundreds of happy customers and counting. Quality you can trust.</div>
+  </div>
+
+  <div class="trust-item">
+    <div class="trust-icon">
+      <!-- Home/house icon -->
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+    </div>
+    <div class="trust-title">Residential Specialists</div>
+    <div class="trust-desc">We focus on what we do best — residential garage doors.</div>
+  </div>
+
+  <div class="trust-item">
+    <div class="trust-icon">
+      <!-- Zap / lightning fast -->
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+      </svg>
+    </div>
+    <div class="trust-title">Fast Response</div>
+    <div class="trust-desc">Quick turnarounds and reliable service when you need it most.</div>
+  </div>
+
 </section>
 
-<section id="services" class="services container">
-<h2>COMPLETE GARAGE DOOR SOLUTIONS</h2>
-<div class="service-grid">
-<div class="service-card"><h3>Installation</h3><p>High-quality garage door installation built to last.</p></div>
-<div class="service-card"><h3>Repair</h3><p>Fast, reliable repairs when you need them.</p></div>
-<div class="service-card"><h3>Openers</h3><p>Modern opener systems and upgrades.</p></div>
-<div class="service-card"><h3>Maintenance</h3><p>Preventative maintenance and tune-ups.</p></div>
-</div>
+
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+<section class="services-section" id="services">
+  <span class="section-eyebrow">Our Services</span>
+  <h2 class="section-title-light">Complete Garage Door Solutions</h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">
+        <!-- Garage door / grid icon -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="1"/>
+          <line x1="2" y1="8"  x2="22" y2="8"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <line x1="2" y1="16" x2="22" y2="16"/>
+          <line x1="12" y1="4" x2="12" y2="20"/>
+        </svg>
+      </div>
+      <div class="service-name">Installation</div>
+      <div class="service-desc">Professional installation of high-quality garage doors built to last.</div>
+      <a href="#" class="service-link">
+        Learn More
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <!-- Wrench / repair -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+        </svg>
+      </div>
+      <div class="service-name">Repair</div>
+      <div class="service-desc">Fast, reliable repairs to get your garage door working like new again.</div>
+      <a href="#" class="service-link">
+        Learn More
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <!-- Remote/opener icon -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="7" y="2" width="10" height="20" rx="3"/>
+          <circle cx="12" cy="8"  r="1.2" fill="currentColor" stroke="none"/>
+          <line x1="9"  y1="13" x2="15" y2="13"/>
+          <line x1="9"  y1="16" x2="15" y2="16"/>
+        </svg>
+      </div>
+      <div class="service-name">Openers</div>
+      <div class="service-desc">Quiet, powerful garage door openers with the latest technology.</div>
+      <a href="#" class="service-link">
+        Learn More
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <!-- Settings/gear -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </div>
+      <div class="service-name">Maintenance</div>
+      <div class="service-desc">Keep your door performing at its best with regular tune-ups.</div>
+      <a href="#" class="service-link">
+        Learn More
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
 </section>
 
-<section class="projects container">
-<div class="section-head"><h2>BUILT TO IMPRESS</h2><a href="#">VIEW ALL PROJECTS</a></div>
-<div class="project-grid">
-<div class="project"></div><div class="project"></div><div class="project"></div><div class="project"></div>
-</div>
+
+<!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+<section class="projects-section" id="projects">
+  <div class="projects-header">
+    <div>
+      <span class="section-eyebrow">Recent Projects</span>
+      <h2 class="section-title-dark">Built to Impress</h2>
+    </div>
+    <a href="#" class="btn-outline-dark">
+      View All Projects
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <!--
+        Replace src with your actual project photo.
+        Recommended size: 600x450px or larger, object-fit: cover handles cropping.
+      -->
+      <img src="project-1.jpg" alt="Garage door installation project 1" />
+      <div class="project-card-overlay">
+        <span class="project-label">Residential Installation</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="project-2.jpg" alt="Garage door installation project 2" />
+      <div class="project-card-overlay">
+        <span class="project-label">Custom Wood Door</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="project-3.jpg" alt="Garage door installation project 3" />
+      <div class="project-card-overlay">
+        <span class="project-label">Modern Carriage Style</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="project-4.jpg" alt="Garage door installation project 4" />
+      <div class="project-card-overlay">
+        <span class="project-label">New Construction</span>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section id="reviews" class="reviews container">
-<div class="section-head"><h2>REAL REVIEWS. REAL RESULTS.</h2><a href="#">VIEW ALL REVIEWS</a></div>
-<div class="review-grid">
-<div class="review">★★★★★<p>Professional, on time and amazing work.</p></div>
-<div class="review">★★★★★<p>Fast response and fair pricing.</p></div>
-<div class="review">★★★★★<p>Great experience from start to finish.</p></div>
-</div>
+
+<!-- ============================================================
+     REVIEWS
+     ============================================================ -->
+<section class="reviews-section" id="reviews">
+  <div class="reviews-header">
+    <div>
+      <span class="section-eyebrow">What Our Customers Say</span>
+      <h2 class="section-title-dark">Real Reviews. Real Results.</h2>
+    </div>
+    <a href="#" class="btn-outline-dark">
+      View All Reviews
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <div class="review-top">
+        <div class="google-badge">
+          <!-- Google G SVG -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <div class="review-stars">★★★★★</div>
+      </div>
+      <p class="review-text">"Atlas Door Company was professional, on time, and did an amazing job on our new garage door. Highly recommend!!"</p>
+      <div class="review-author">– Jason T.</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-top">
+        <div class="google-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <div class="review-stars">★★★★★</div>
+      </div>
+      <p class="review-text">"Fast response and fair pricing. Our garage door works better than ever!"</p>
+      <div class="review-author">– Melissa R.</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-top">
+        <div class="google-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <div class="review-stars">★★★★★</div>
+      </div>
+      <p class="review-text">"Great experience from start to finish. Quality work and excellent service. Will use again!"</p>
+      <div class="review-author">– Brian K.</div>
+    </div>
+
+  </div>
 </section>
 
-<section class="cta">
-<div class="container cta-wrap">
-<div>
-<h2>READY TO <span>LIFT THE STANDARD?</span></h2>
-<p>Let's get your garage door working perfectly.</p>
-</div>
-<div class="cta-buttons">
-<a href="#" class="btn orange">GET A FREE QUOTE</a>
-<a href="#" class="btn dark">972.555.0123</a>
-</div>
-</div>
+
+<!-- ============================================================
+     CTA BANNER
+     ============================================================ -->
+<section class="cta-banner" id="contact">
+  <div>
+    <span class="cta-eyebrow">Ready to Work With Us?</span>
+    <h2 class="cta-headline">
+      Ready to<br>
+      <span class="orange">Lift the Standard?</span>
+    </h2>
+    <p class="cta-sub">Let's get your garage door working perfectly.</p>
+  </div>
+  <div class="cta-buttons">
+    <a href="#" class="btn-orange" style="font-size:16px; padding:16px 32px; justify-content:center;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      Get a Free Quote
+    </a>
+    <a href="tel:9725550123" class="btn-cta-phone">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      972.555.0123
+    </a>
+  </div>
 </section>
 
-<footer class="footer">
-<div class="container">
-<img src="LOGO.png" class="footer-logo">
-</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="about">
+  <div class="footer-top">
+
+    <div class="footer-brand">
+      <img src="LOGO.png" alt="Atlas Door Company" />
+    </div>
+
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#">Installation</a></li>
+        <li><a href="#">Repair</a></li>
+        <li><a href="#">Openers</a></li>
+        <li><a href="#">Maintenance</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Service Areas</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div id="areas">
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#">Dallas</a></li>
+        <li><a href="#">Fort Worth · Plano</a></li>
+        <li><a href="#">Frisco · McKinney</a></li>
+        <li><a href="#">& Surrounding Areas</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Follow Us</div>
+      <div class="footer-social">
+        <!-- Facebook -->
+        <a href="#" class="social-btn" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" class="social-btn" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <!-- Google -->
+        <a href="#" class="social-btn" aria-label="Google">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Atlas Door Company. All rights reserved.</span>
+    <a href="tel:9725550123">972.555.0123</a>
+  </div>
 </footer>
 
 </body>

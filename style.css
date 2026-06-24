@@ -24,6 +24,12 @@ img { display: block; max-width: 100%; }
   position: sticky; top: 0; z-index: 999;
   border-bottom: 1px solid rgba(255,106,0,.15);
 }
+/* Header uses full viewport width — no dead margins */
+.header .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 max(2vw, 20px);
+}
 .nav-wrap {
   height: 90px;
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
@@ -108,29 +114,29 @@ img { display: block; max-width: 100%; }
   min-height: 680px;
 }
 
-/* Image is absolutely positioned, takes up right ~60% of viewport,
-   starts at the very top so the full figure is visible */
+/* Image: anchored left at 28% so it fills center+right, no dead zone */
 .hero-bg {
   position: absolute;
-  top: -20px;          /* slight bleed above to eliminate any gap */
+  top: -20px;
+  left: 28%;
   right: 0;
-  width: 62%;
+  width: auto;
   height: calc(100% + 20px);
   object-fit: cover;
-  object-position: top center;  /* show top of image first — keeps full figure */
-  opacity: .6;
+  object-position: top center;
+  opacity: .65;
 }
 
-/* Gradient: solid navy on left third, hard fade through middle */
+/* Gradient solid navy left third, then fade — text always readable */
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(
     90deg,
     rgba(4,19,39,1)   0%,
-    rgba(4,19,39,1)   28%,
-    rgba(4,19,39,.9)  40%,
-    rgba(4,19,39,.55) 55%,
-    rgba(4,19,39,.15) 75%,
+    rgba(4,19,39,1)   32%,
+    rgba(4,19,39,.92) 42%,
+    rgba(4,19,39,.5)  58%,
+    rgba(4,19,39,.1)  78%,
     transparent       100%
   );
 }
@@ -390,7 +396,7 @@ img { display: block; max-width: 100%; }
   .service-grid  { grid-template-columns: repeat(2, 1fr); }
   .review-grid   { grid-template-columns: repeat(2, 1fr); }
   .footer-grid   { grid-template-columns: 1fr 1fr; }
-  .hero-bg       { width: 70%; }
+  .hero-bg       { left: 35%; right: 0; width: auto; }
   .hero-h1       { font-size: clamp(4.5rem, 9vw, 8rem); }
 }
 

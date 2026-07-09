@@ -182,6 +182,43 @@
 {% include footer.html %}
 
 {% include scripts.html %}
-{% include ghl-form-script.html source="Website - atlasdoorcompany.com" %}
+<script>
+/* ── GHL WEBHOOK ── */
+document.getElementById('doorForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const submitBtn = this.querySelector('button[type="submit"]');
+  const status = document.getElementById('form-status');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'SENDING...';
+  const payload = {
+    firstName:  document.getElementById('fname').value,
+    lastName:   document.getElementById('lname').value,
+    phone:      document.getElementById('phone').value,
+    email:      document.getElementById('email').value,
+    message:    document.getElementById('message').value,
+    smsConsent: document.getElementById('smsConsent').checked ? 'yes' : 'no',
+    source:     'Website - atlasdoorcompany.com'
+  };
+  try {
+    const res = await fetch('https://services.leadconnectorhq.com/hooks/FPHCnbNKCo5tfDzznUBG/webhook-trigger/f91f427b-b11e-4395-92d5-470717f16762', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (res.ok) {
+      status.style.display = 'block';
+      status.style.color = '#4CAF50';
+      status.textContent = "✅ Got it! We'll be in touch shortly.";
+      this.reset();
+    } else { throw new Error(); }
+  } catch {
+    status.style.display = 'block';
+    status.style.color = '#ff6a00';
+    status.textContent = '❌ Something went wrong. Please call us at 817.292.1948';
+  }
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'SEND MY FREE QUOTE REQUEST';
+});
+</script>
 </body>
 </html>

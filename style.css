@@ -25,11 +25,11 @@ img { display: block; max-width: 100%; }
 }
 .nav-wrap {
   max-width: var(--max); margin: 0 auto;
-  padding: 0 var(--pad); height: 140px;
+  padding: 0 var(--pad); height: 167px;
   display: flex; align-items: center;
   justify-content: space-between; gap: 20px;
 }
-.logo { height: 128px !important; width: auto !important; max-width: none !important; flex-shrink: 0; }
+.logo { height: 155px !important; width: auto !important; max-width: none !important; flex-shrink: 0; }
 .nav-links { display: flex; gap: 24px; align-items: center; }
 .nav-links a { color: rgba(255,255,255,.82); font-weight: 600; font-size: .85rem; letter-spacing: .03em; transition: color .2s; }
 .nav-links a:hover { color: var(--orange); }
@@ -86,7 +86,7 @@ img { display: block; max-width: 100%; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
 /* ── MOBILE NAV ── */
-.mobile-nav { display: none; position: absolute; top: 140px; left: 0; right: 0; background: #041327; border-bottom: 2px solid rgba(255,106,0,.2); z-index: 998; flex-direction: column; box-shadow: 0 12px 40px rgba(0,0,0,.6); max-height: 0; overflow: hidden; opacity: 0; transition: max-height .35s ease, opacity .3s ease; }
+.mobile-nav { display: none; position: absolute; top: 167px; left: 0; right: 0; background: #041327; border-bottom: 2px solid rgba(255,106,0,.2); z-index: 998; flex-direction: column; box-shadow: 0 12px 40px rgba(0,0,0,.6); max-height: 0; overflow: hidden; opacity: 0; transition: max-height .35s ease, opacity .3s ease; }
 .mobile-nav.open { display: flex; max-height: 500px; opacity: 1; }
 .mobile-nav a { color: #fff; font-size: 1rem; font-weight: 600; padding: 15px 24px; border-bottom: 1px solid rgba(255,255,255,.06); display: flex; align-items: center; transition: color .2s, background .2s; }
 .mobile-nav a:last-child { border-bottom: none; }
@@ -225,6 +225,37 @@ img { display: block; max-width: 100%; }
 .service-card:hover .learn-more { gap: 9px; }
 
 /* ══════════════════════════════════════════
+   CITY / SERVICE AREA PAGES
+   ══════════════════════════════════════════ */
+.city-hero { position: relative; overflow: hidden; background: var(--navy); padding: 72px 0 60px; }
+.city-hero-glow {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 55% 60% at 15% 20%, rgba(255,106,0,.16) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 50% at 85% 80%, rgba(255,106,0,.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+.city-hero-inner { position: relative; z-index: 1; max-width: 700px; }
+.city-hero-inner h1 {
+  font-family: Oswald, sans-serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700;
+  color: #fff; text-transform: uppercase; line-height: 1.1; margin: 10px 0 20px;
+  text-shadow: 0 4px 30px rgba(0,0,0,.5);
+}
+.city-hero-inner h1 span { color: var(--orange); text-shadow: 0 0 40px rgba(255,106,0,.4); }
+.city-hero-inner p { color: rgba(255,255,255,.68); font-size: 1rem; line-height: 1.75; margin-bottom: 28px; max-width: 620px; }
+
+.city-services { background: #071423; }
+.city-services-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+.city-service-card {
+  display: block; background: linear-gradient(155deg,#0f2847 0%,#071529 100%);
+  border: 1px solid rgba(255,106,0,.16); border-radius: 10px; padding: 24px 20px;
+  text-decoration: none; transition: border-color .3s, transform .25s;
+}
+.city-service-card:hover { border-color: rgba(255,106,0,.45); transform: translateY(-3px); }
+.city-service-card h3 { font-family: Oswald, sans-serif; font-size: 1rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .03em; margin-bottom: 8px; }
+.city-service-card p { color: rgba(255,255,255,.5); font-size: .8rem; line-height: 1.6; }
+
+/* ══════════════════════════════════════════
    ABOUT PAGE
    ══════════════════════════════════════════ */
 .about-hero { position: relative; overflow: hidden; background: var(--navy); padding: 72px 0 60px; }
@@ -359,7 +390,7 @@ img { display: block; max-width: 100%; }
 .footer { background: #03101e; padding: 48px 0 22px; }
 .footer-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
 .footer-grid { display: grid; grid-template-columns: auto repeat(3,1fr) auto; gap: 28px; padding-bottom: 28px; border-bottom: 1px solid #152840; }
-.footer-logo { height: 54px; margin-bottom: 10px; }
+.footer-logo { height: 78px; margin-bottom: 10px; }
 .footer-tagline { color: rgba(255,255,255,.28); font-size: .72rem; letter-spacing: .08em; }
 .footer-col h4, .footer-social h4 { color: #fff; font-weight: 800; font-size: .76rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
@@ -388,6 +419,7 @@ img { display: block; max-width: 100%; }
   .hero-h1      { font-size: clamp(3.4rem, 6vw, 5.5rem); }
   .trust-bar-inner { grid-template-columns: repeat(2,1fr); gap: 30px; }
   .about-values-grid { grid-template-columns: repeat(2,1fr); }
+  .city-services-grid { grid-template-columns: repeat(2,1fr); }
 }
 
 @media (max-width: 768px) {
@@ -414,12 +446,13 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 480px) {
-  .logo { height: 92px !important; }
-  .nav-wrap { height: 108px; }
-  .mobile-nav { top: 108px; }
+  .logo { height: 115px !important; }
+  .nav-wrap { height: 132px; }
+  .mobile-nav { top: 132px; }
   .hero-h1 { font-size: clamp(2.8rem, 13vw, 3.8rem); }
   .trust-bar-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
   .about-values-grid { grid-template-columns: 1fr; }
+  .city-services-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 

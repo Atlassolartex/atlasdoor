@@ -1,0 +1,33 @@
+<script>
+/* ── SERVICES DROPDOWN ── */
+const svcBtn = document.getElementById('servicesDropdownBtn');
+const svcMenu = document.getElementById('servicesDropdownMenu');
+svcBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const open = svcMenu.classList.toggle('open');
+  svcBtn.setAttribute('aria-expanded', open);
+});
+document.addEventListener('click', (e) => {
+  if (!svcMenu.contains(e.target) && e.target !== svcBtn) {
+    svcMenu.classList.remove('open');
+    svcBtn.setAttribute('aria-expanded', 'false');
+  }
+});
+
+/* ── MOBILE NAV ── */
+const btn = document.getElementById('hamburgerBtn');
+const nav = document.getElementById('mobileNav');
+function toggleNav() {
+  const open = nav.classList.toggle('open');
+  btn.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', open);
+  nav.setAttribute('aria-hidden', !open);
+}
+btn.addEventListener('click', toggleNav);
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.classList.remove('open');
+  btn.classList.remove('open');
+  btn.setAttribute('aria-expanded', 'false');
+  nav.setAttribute('aria-hidden', 'true');
+}));
+</script>

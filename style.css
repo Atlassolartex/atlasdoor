@@ -225,6 +225,34 @@ img { display: block; max-width: 100%; }
 .service-card:hover .learn-more { gap: 9px; }
 
 /* ══════════════════════════════════════════
+   LEGAL PAGES (Privacy Policy / Terms)
+   ══════════════════════════════════════════ */
+.legal-page { background: #071423; padding: 60px 0 80px; }
+.legal-content { max-width: 760px; }
+.legal-content h1 {
+  font-family: Oswald, sans-serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700;
+  color: #fff; text-transform: uppercase; letter-spacing: .02em; margin-bottom: 20px;
+}
+.legal-content h2 {
+  font-family: Oswald, sans-serif; font-size: 1.15rem; font-weight: 700;
+  color: var(--orange); text-transform: uppercase; letter-spacing: .04em;
+  margin: 30px 0 10px;
+}
+.legal-content p { color: rgba(255,255,255,.62); font-size: .92rem; line-height: 1.7; margin-bottom: 12px; }
+.legal-content .legal-intro { font-size: .98rem; color: rgba(255,255,255,.75); }
+.legal-content ul { margin: 4px 0 12px 20px; }
+.legal-content li { color: rgba(255,255,255,.62); font-size: .92rem; line-height: 1.75; }
+.legal-content a { color: var(--orange); }
+.legal-content a:hover { text-decoration: underline; }
+.legal-contact { line-height: 1.9; }
+.legal-back {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 26px;
+  color: var(--orange); font-weight: 700; font-size: .88rem; text-decoration: none;
+  transition: gap .2s;
+}
+.legal-back:hover { gap: 10px; }
+
+/* ══════════════════════════════════════════
    SERVICE DETAIL PAGES
    ══════════════════════════════════════════ */
 .svc-hero { background: var(--navy); padding-top: 20px; }

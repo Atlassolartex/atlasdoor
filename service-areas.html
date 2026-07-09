@@ -1,0 +1,76 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Areas | Atlas Door Company</title>
+<meta name="description" content="Atlas Door Company proudly serves Joshua, Burleson, Cleburne, Godley, Crowley, Granbury, and the surrounding Johnson and Tarrant county communities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+{% include header.html %}
+
+{% include mobile-nav.html %}
+
+<!-- SERVICE AREAS HERO -->
+<section class="city-hero">
+  <div class="city-hero-glow"></div>
+  <div class="sec city-hero-inner">
+    <div class="section-eyebrow">SERVICE AREAS</div>
+    <h1>Proudly Serving<br><span>Johnson &amp; Tarrant Counties.</span></h1>
+    <p>Atlas Door Company is based in Joshua, and we provide garage door installation, repair, opener service, and maintenance throughout the surrounding communities. Find your city below.</p>
+  </div>
+</section>
+
+<!-- CITY GRID -->
+<section class="city-services">
+  <div class="sec">
+    <div class="city-services-grid">
+      <a href="joshua.html" class="city-service-card">
+        <h3>Joshua</h3>
+        <p>Home base — garage door service in Joshua, TX.</p>
+      </a>
+      <a href="burleson.html" class="city-service-card">
+        <h3>Burleson</h3>
+        <p>Garage door installation, repair &amp; maintenance in Burleson.</p>
+      </a>
+      <a href="cleburne.html" class="city-service-card">
+        <h3>Cleburne</h3>
+        <p>Garage door service throughout Cleburne, TX.</p>
+      </a>
+      <a href="godley.html" class="city-service-card">
+        <h3>Godley</h3>
+        <p>Fast, local garage door service in Godley.</p>
+      </a>
+      <a href="crowley.html" class="city-service-card">
+        <h3>Crowley</h3>
+        <p>Garage door installation &amp; repair in Crowley, TX.</p>
+      </a>
+      <a href="granbury.html" class="city-service-card">
+        <h3>Granbury</h3>
+        <p>Garage door service in Granbury &amp; surrounding areas.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="svc-cta">
+  <div class="sec svc-cta-inner">
+    <h2>Don't See Your City?</h2>
+    <p>We may still serve your area — give us a call and we'll let you know.</p>
+    <a href="index.html#contact" class="btn btn-orange">GET A FREE QUOTE &nbsp;→</a>
+  </div>
+</section>
+
+{% include footer.html %}
+
+{% include scripts.html %}
+</body>
+</html>

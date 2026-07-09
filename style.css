@@ -225,6 +225,28 @@ img { display: block; max-width: 100%; }
 .service-card:hover .learn-more { gap: 9px; }
 
 /* ══════════════════════════════════════════
+   ABOUT PAGE
+   ══════════════════════════════════════════ */
+.about-hero { background: var(--navy); padding: 64px 0 56px; }
+.about-hero-inner { max-width: 700px; }
+.about-hero-inner h1 { font-family: Oswald, sans-serif; font-size: clamp(2.2rem, 4.5vw, 3.4rem); font-weight: 700; color: #fff; text-transform: uppercase; line-height: 1.1; margin: 10px 0 20px; }
+.about-hero-inner h1 span { color: var(--orange); }
+.about-hero-inner p { color: rgba(255,255,255,.68); font-size: 1rem; line-height: 1.75; margin-bottom: 28px; max-width: 620px; }
+
+.about-values { background: #071423; }
+.about-values-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+.about-value-card { background: linear-gradient(155deg,#0f2847 0%,#071529 100%); border: 1px solid rgba(255,106,0,.16); border-radius: 10px; padding: 26px 20px; text-align: center; transition: border-color .3s, transform .25s; }
+.about-value-card:hover { border-color: rgba(255,106,0,.45); transform: translateY(-3px); }
+.about-value-icon { width: 50px; height: 50px; margin: 0 auto 14px; border-radius: 50%; background: rgba(255,106,0,.08); border: 1.5px solid rgba(255,106,0,.25); display: flex; align-items: center; justify-content: center; color: var(--orange); }
+.about-value-card h3 { font-family: Oswald, sans-serif; font-size: 1rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: .03em; margin-bottom: 10px; }
+.about-value-card p { color: rgba(255,255,255,.55); font-size: .82rem; line-height: 1.6; }
+
+.about-areas { background: var(--navy); border-top: 1px solid rgba(255,106,0,.12); text-align: center; }
+.about-areas-inner { max-width: 680px; margin: 0 auto; }
+.about-areas-inner h2 { font-family: Oswald, sans-serif; font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 700; color: #fff; text-transform: uppercase; margin-bottom: 14px; }
+.about-areas-inner p { color: rgba(255,255,255,.6); font-size: .94rem; line-height: 1.75; }
+
+/* ══════════════════════════════════════════
    LEGAL PAGES (Privacy Policy / Terms)
    ══════════════════════════════════════════ */
 .legal-page { background: #071423; padding: 60px 0 80px; }
@@ -343,6 +365,7 @@ img { display: block; max-width: 100%; }
   .footer-grid  { grid-template-columns: 1fr 1fr; gap: 20px; }
   .hero-h1      { font-size: clamp(3.4rem, 6vw, 5.5rem); }
   .trust-bar-inner { grid-template-columns: repeat(2,1fr); gap: 30px; }
+  .about-values-grid { grid-template-columns: repeat(2,1fr); }
 }
 
 @media (max-width: 768px) {
@@ -374,6 +397,7 @@ img { display: block; max-width: 100%; }
   .mobile-nav { top: 108px; }
   .hero-h1 { font-size: clamp(2.8rem, 13vw, 3.8rem); }
   .trust-bar-inner { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .about-values-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 
